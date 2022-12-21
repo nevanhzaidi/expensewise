@@ -1,0 +1,4 @@
+server/node_modules/
+*.DS_STORE
+config.bat
+node_modules
