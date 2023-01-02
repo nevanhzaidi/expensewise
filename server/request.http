@@ -72,3 +72,90 @@ content-type: application/json
 {
   "password": "newpassword"
 }
+
+### Add Sheet
+
+POST http://localhost:3000/api/v1/sheets/
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+{
+  "description": "1234",
+  "title": "demo"
+}
+
+### Update Sheet
+
+PUT http://localhost:3000/api/v1/sheets/:sheetId
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+{
+  "description": "1234",
+  "title": "update my Sheet1",
+  "owner": "ownerId"
+}
+
+### get all Sheets
+
+GET http://localhost:3000/api/v1/sheets/
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+### get Sheet by id
+
+GET http://localhost:3000/api/v1/sheets/:sheetId
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+### Delete Sheet by id
+
+DELETE http://localhost:3000/api/v1/sheets/:sheetId
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+### Add Expense
+
+POST http://localhost:3000/api/v1/sheets/:sheetId/expenses/
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+{
+  "title": "my Expense",
+  "type": "type",
+  "status": "paid",
+  "amount": 100,
+  "amountType": "incoming"
+}
+
+### Update Expense
+
+PUT http://localhost:3000/api/v1/sheets/:sheetId/expenses/:id
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+{
+  "title": "update my Expense",
+  "type": "type",
+  "status": "unpaid",
+  "amount": 100000,
+  "amountType": "outgoing"
+}
+
+### Get all Expenses by Sheet
+
+GET http://localhost:3000/api/v1/sheets/:sheetId/expenses
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+### Get Expense by id
+
+GET http://localhost:3000/api/v1/sheets/:sheetId/expenses/:id
+content-type: application/json
+Authorization: Bearer paste_token_here
+
+### Delete Expense by id
+
+DELETE http://localhost:3000/api/v1/sheets/:sheetId/expenses/:id
+content-type: application/json
+Authorization: Bearer paste_token_here
