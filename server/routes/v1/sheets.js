@@ -8,6 +8,7 @@ const {
   deleteSheet,
 } = require("../../controllers/sheets");
 const Sheet = require("../../models/Sheet");
+const ExpenseRouter = require("./expenses");
 const advancedResults = require("../../middlewares/advancedResults");
 const { protect } = require("../../middlewares/auth");
 const {
@@ -18,6 +19,9 @@ const {
 } = require("../../middlewares/authorize/sheetPolicy");
 
 const router = express.Router({ mergeParams: true });
+
+// Re-route into other resource routers
+router.use("/:sheetId/expenses", ExpenseRouter);
 
 router.use(protect);
 
