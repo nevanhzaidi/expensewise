@@ -10,7 +10,7 @@ const {
 const Sheet = require("../../models/Sheet");
 
 // Include other resource routers
-// const ExpenseRouter = require("./expenses");
+const ExpenseRouter = require("./expenses");
 
 const router = express.Router({ mergeParams: true });
 
@@ -24,7 +24,7 @@ const {
 } = require("../../middlewares/authorize/sheetPolicy");
 
 // Re-route into other resource routers
-// router.use("/:sheetId/expenses", ExpenseRouter);
+router.use("/:sheetId/expenses", ExpenseRouter);
 
 router.use(protect);
 
