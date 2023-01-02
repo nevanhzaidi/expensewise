@@ -41,7 +41,7 @@ router
     ),
     getSheets,
   )
-  .post(sheetPolicy, addSheet);
+  .post(addSheet);
 
 router
   .route("/:id")

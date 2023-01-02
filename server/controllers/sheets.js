@@ -22,7 +22,7 @@ exports.getSheet = asyncHandler(async (req, res) =>
 // @route     POST /api/v1/bootcamps/:bootcampId/sheets
 // @access    Private
 exports.addSheet = asyncHandler(async (req, res) => {
-  req.body.user = req.user.id;
+  req.body.owner = req.user.id;
 
   const sheet = await Sheet.create(req.body);
 
