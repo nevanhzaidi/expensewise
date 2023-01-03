@@ -7,10 +7,12 @@ const ExpenseSchema = new mongoose.Schema({
     type: String,
     trim: true,
     required: [true, "Please add a title"],
+    maxlength: 100,
   },
   type: {
     type: String,
     required: [true, "Please add a type"],
+    maxlength: 50,
   },
   status: {
     type: String,
