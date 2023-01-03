@@ -1,6 +1,14 @@
-const dotenv = require("dotenv");
-const path = require("path");
-const Joi = require("joi");
+// const dotenv = require("dotenv");
+// const path = require("path");
+// const Joi = require("joi");
+import dotenv from "dotenv";
+import Joi from "joi";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, "../.env") });
 
@@ -26,7 +34,7 @@ if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
 
-module.exports = {
+export default {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
   mongoose: {

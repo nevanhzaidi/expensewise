@@ -1,18 +1,18 @@
-const httpStatus = require("http-status");
-const asyncHandler = require("../middlewares/async");
-const Expense = require("../models/Expense");
+import httpStatus from "http-status";
+import asyncHandler from "../middlewares/async";
+import Expense from "../models/Expense";
 
 // @desc      Get expenses
 // @route     GET /api/v1/expenses
 // @route     GET /api/v1/sheets/:sheetId/expenses
 // @access    Public
-exports.getExpenses = asyncHandler(async (req, res) =>
+const getExpenses = asyncHandler(async (req, res) =>
   res.status(httpStatus.OK).json(res.advancedResults));
 
 // @desc      Get single expense
 // @route     GET /api/v1/expenses/:id
 // @access    Public
-exports.getExpense = asyncHandler(async (req, res) =>
+const getExpense = asyncHandler(async (req, res) =>
   res.status(httpStatus.OK).json({
     success: true,
     data: req.expense,
@@ -21,7 +21,7 @@ exports.getExpense = asyncHandler(async (req, res) =>
 // @desc      Add expense
 // @route     POST /api/v1/sheets/:sheetId/expenses
 // @access    Private
-exports.addExpense = asyncHandler(async (req, res) => {
+const addExpense = asyncHandler(async (req, res) => {
   req.body.sheet = req.params.sheetId;
   req.body.owner = req.user.id;
 
@@ -36,7 +36,7 @@ exports.addExpense = asyncHandler(async (req, res) => {
 // @desc      Update expense
 // @route     PUT /api/v1/expenses/:id
 // @access    Private
-exports.updateExpense = asyncHandler(async (req, res) => {
+const updateExpense = asyncHandler(async (req, res) => {
   const expense = await Expense.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -51,7 +51,7 @@ exports.updateExpense = asyncHandler(async (req, res) => {
 // @desc      Delete expense
 // @route     DELETE /api/v1/expenses/:id
 // @access    Private
-exports.deleteExpense = asyncHandler(async (req, res) => {
+const deleteExpense = asyncHandler(async (req, res) => {
   await req.expense.remove();
 
   res.status(httpStatus.OK).json({
@@ -59,3 +59,5 @@ exports.deleteExpense = asyncHandler(async (req, res) => {
     data: {},
   });
 });
+
+export { getExpenses, getExpense, addExpense, deleteExpense, updateExpense };

@@ -1,5 +1,7 @@
-const winston = require("winston");
-const config = require("./config");
+// const winston = require("winston");
+// const config = require("./config");
+import winston from "winston";
+import config from "./config";
 
 const enumerateErrorFormat = winston.format((info) => {
   if (info instanceof Error) {
@@ -12,7 +14,9 @@ const logger = winston.createLogger({
   level: config.env === "development" ? "debug" : "info",
   format: winston.format.combine(
     enumerateErrorFormat(),
-    config.env === "development" ? winston.format.colorize() : winston.format.uncolorize(),
+    config.env === "development"
+      ? winston.format.colorize()
+      : winston.format.uncolorize(),
     winston.format.splat(),
     winston.format.printf(({ level, message }) => `${level}: ${message}`),
   ),
@@ -23,4 +27,4 @@ const logger = winston.createLogger({
   ],
 });
 
-module.exports = logger;
+export default logger;

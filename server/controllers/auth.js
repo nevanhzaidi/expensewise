@@ -1,9 +1,5 @@
-const passwords = require("./auth/passwords");
-const registrations = require("./auth/registrations");
-const sessions = require("./auth/sessions");
+import passwords from "./auth/passwords";
+import registrations from "./auth/registrations";
+import sessions from "./auth/sessions";
 
-module.exports = {
-  passwords,
-  registrations,
-  sessions,
-};
+export { passwords, registrations, sessions };

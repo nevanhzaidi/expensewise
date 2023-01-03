@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
-const httpStatus = require("http-status");
-const config = require("../config/config");
-const logger = require("../config/logger");
-const ErrorResponse = require("../utils/errorResponse");
+import mongoose from "mongoose";
+import httpStatus from "http-status";
+import config from "../config/config";
+import logger from "../config/logger";
+import ErrorResponse from "../utils/errorResponse";
 
 const errorHandler = (err, req, res) => {
   let { statusCode, message } = err;
@@ -47,7 +47,4 @@ const errorConverter = (err, req, res) => {
   );
 };
 
-module.exports = {
-  errorConverter,
-  errorHandler,
-};
+export { errorConverter, errorHandler };

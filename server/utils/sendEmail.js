@@ -1,4 +1,7 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
+import config from "../config/config";
+import logger from "../config/logger";
+
 const {
   SMTP_EMAIL,
   FROM_EMAIL,
@@ -6,8 +9,7 @@ const {
   SMTP_PASSWORD,
   FROM_NAME,
   SMTP_PORT,
-} = require("../config/config");
-const logger = require("../config/logger");
+} = config;
 
 const sendEmail = async (options) => {
   const transporter = nodemailer.createTransport({
@@ -31,4 +33,4 @@ const sendEmail = async (options) => {
   logger.info("Message sent: %s", info.messageId);
 };
 
-module.exports = sendEmail;
+export default sendEmail;
