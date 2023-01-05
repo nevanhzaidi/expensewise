@@ -1,9 +1,8 @@
 import express from "express";
 import Sheet from "../../models/Sheet";
-// Include other resource routers
-import ExpenseRouter from "./expenses";
 import advancedResults from "../../middlewares/advancedResults";
 import protect from "../../middlewares/auth";
+import ExpenseRouter from "./expenses";
 
 import {
   getSheets,

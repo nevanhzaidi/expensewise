@@ -1,11 +1,16 @@
 import express from "express";
 import protect from "../../middlewares/auth";
 
-import { passwords, registrations, sessions } from "../../controllers/auth";
-
-const { forgotPassword, resetPassword, updatePassword } = passwords;
-const { register, updateDetails } = registrations;
-const { getMe, login, logout } = sessions;
+import {
+  forgotPassword,
+  resetPassword,
+  updatePassword,
+  register,
+  updateDetails,
+  login,
+  logout,
+  getMe,
+} from "../../controllers/auth";
 
 const router = express.Router();
 

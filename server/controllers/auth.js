@@ -1,5 +1,18 @@
-import passwords from "./auth/passwords";
-import registrations from "./auth/registrations";
-import sessions from "./auth/sessions";
+import {
+  forgotPassword,
+  resetPassword,
+  updatePassword,
+} from "./auth/passwords";
+import { register, updateDetails } from "./auth/registrations";
+import { login, logout, getMe } from "./auth/sessions";
 
-export { passwords, registrations, sessions };
+export {
+  forgotPassword,
+  resetPassword,
+  updatePassword,
+  register,
+  updateDetails,
+  login,
+  logout,
+  getMe,
+};

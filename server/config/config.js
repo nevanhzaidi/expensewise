@@ -1,6 +1,3 @@
-// const dotenv = require("dotenv");
-// const path = require("path");
-// const Joi = require("joi");
 import dotenv from "dotenv";
 import Joi from "joi";
 import path from "path";

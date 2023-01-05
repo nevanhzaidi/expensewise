@@ -4,7 +4,7 @@ import Sheet from "../models/Sheet";
 
 // @desc      Get sheets
 // @route     GET /api/v1/sheets
-// @route     GET /api/v1/bootcamps/:bootcampId/sheets
+// @route     GET /api/v1/sheets/:sheetId/sheets
 // @access    Public
 const getSheets = asyncHandler(async (req, res) =>
   res.status(httpStatus.OK).json(res.advancedResults));
@@ -19,7 +19,7 @@ const getSheet = asyncHandler(async (req, res) =>
   }));
 
 // @desc      Add sheet
-// @route     POST /api/v1/bootcamps/:bootcampId/sheets
+// @route     POST /api/v1/sheets/:sheetId/sheets
 // @access    Private
 const addSheet = asyncHandler(async (req, res) => {
   req.body.owner = req.user.id;

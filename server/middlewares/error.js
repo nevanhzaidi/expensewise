@@ -1,10 +1,11 @@
+/* eslint no-unused-vars: ["off", { "varsIgnorePattern": "next" }] */
 import mongoose from "mongoose";
 import httpStatus from "http-status";
 import config from "../config/config";
 import logger from "../config/logger";
 import ErrorResponse from "../utils/errorResponse";
 
-const errorHandler = (err, req, res) => {
+const errorHandler = (err, req, res, next) => {
   let { statusCode, message } = err;
   if (config.env === "production" && !err.isOperational) {
     statusCode = httpStatus.INTERNAL_SERVER_ERROR;
@@ -28,23 +29,20 @@ const errorHandler = (err, req, res) => {
   res.status(statusCode).json({ response });
 };
 
-const errorConverter = (err, req, res) => {
+const errorConverter = (err, req, res, next) => {
   let error = err;
   const statusCode =
     error.statusCode || error instanceof mongoose.Error
       ? httpStatus.BAD_REQUEST
       : httpStatus.INTERNAL_SERVER_ERROR;
 
+  const message = error.message || httpStatus[statusCode];
+
   if (!(error instanceof ErrorResponse)) {
-    const message = error.message || httpStatus[statusCode];
     error = new ErrorResponse(statusCode, message, false, err.stack);
   }
 
-  errorHandler(
-    new ErrorResponse(error.message || httpStatus[statusCode], statusCode),
-    req,
-    res,
-  );
+  errorHandler(new ErrorResponse(message, statusCode), req, res);
 };
 
 export { errorConverter, errorHandler };
