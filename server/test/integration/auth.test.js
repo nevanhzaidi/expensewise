@@ -3,11 +3,11 @@ import { faker } from "@faker-js/faker";
 import httpStatus from "http-status";
 import request from "supertest";
 
-import app from "../../app";
-import emailService from "../../utils/sendEmail";
-import setupTestDB from "../utils/setupTestDB";
-import User from "../../models/User";
-import UserFactory from "../factories/user.factory";
+import app from "$/app";
+import emailService from "$/utils/sendEmail";
+import setupTestDB from "$/test/utils/setupTestDB";
+import User from "$/models/User";
+import UserFactory from "$/test/factories/user.factory";
 
 setupTestDB();
 

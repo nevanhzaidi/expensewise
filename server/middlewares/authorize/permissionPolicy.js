@@ -1,6 +1,6 @@
 import httpStatus from "http-status";
 
-import ErrorResponse from "../../utils/errorResponse";
+import ErrorResponse from "$/utils/errorResponse";
 
 const permissionPolicy = async (req, res, next) => {
   if (req.permission.sheet.equals(req.sheet._id)) {

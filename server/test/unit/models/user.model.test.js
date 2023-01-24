@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from "@jest/globals";
 import { faker } from "@faker-js/faker";
 
-import UserFactory from "../../factories/user.factory";
+import UserFactory from "$/test/factories/user.factory";
 
 const FAKER_STRING = faker.lorem.lines(101);
 

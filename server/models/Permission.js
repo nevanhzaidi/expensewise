@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import ErrorResponse from "../utils/errorResponse";
+import ErrorResponse from "$/utils/errorResponse";
 import httpStatus from "http-status";
 
 const PermissionSchema = new mongoose.Schema(

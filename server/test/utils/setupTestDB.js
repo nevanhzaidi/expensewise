@@ -1,8 +1,8 @@
 import { afterAll, beforeAll, beforeEach } from "@jest/globals";
 import mongoose from "mongoose";
 
-import config from "../../config/config";
-import logger from "../../config/logger";
+import config from "$/config/config";
+import logger from "$/config/logger";
 
 const setupTestDB = () => {
   beforeAll(async () => {

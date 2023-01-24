@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 
-import asyncHandler from "../middlewares/async";
-import Permission from "../models/Permission";
+import asyncHandler from "$/middlewares/async";
+import Permission from "$/models/Permission";
 
 // @desc      get permissions
 // @route     GET /api/v1/sheets/:sheetId/permissions

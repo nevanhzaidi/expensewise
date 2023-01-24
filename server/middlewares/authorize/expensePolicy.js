@@ -1,6 +1,6 @@
 import httpStatus from "http-status";
 
-import ErrorResponse from "../../utils/errorResponse";
+import ErrorResponse from "$/utils/errorResponse";
 
 const expensePolicy = async (req, res, next) => {
   if (req.expense.sheet.id === req.sheet.id) {

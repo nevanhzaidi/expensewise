@@ -1,9 +1,9 @@
 import httpStatus from "http-status";
 
-import asyncHandler from "../../middlewares/async";
-import ErrorResponse from "../../utils/errorResponse";
-import sendSessionResponse from "../helpers/sendSessionResponse";
-import User from "../../models/User";
+import asyncHandler from "$/middlewares/async";
+import ErrorResponse from "$/utils/errorResponse";
+import sendSessionResponse from "$/controllers/helpers/sendSessionResponse";
+import User from "$/models/User";
 
 // @desc      Login user
 // @route     POST /api/v1/auth/login

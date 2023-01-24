@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 
-import ErrorResponse from "../../utils/errorResponse";
-import Permission from "../../models/Permission";
+import ErrorResponse from "$/utils/errorResponse";
+import Permission from "$/models/Permission";
 
 const sheetPolicy = async (req, res, next) => {
   req.user.permission = await Permission.findOne({

@@ -1,7 +1,7 @@
 import express from "express";
 
 import { password, registration, sessions } from "../../controllers/auth";
-import protect from "../../middlewares/auth";
+import protect from "$/middlewares/auth";
 
 const { forgotPassword, resetPassword, updatePassword } = password;
 const { register, updateDetails } = registration;

@@ -1,8 +1,8 @@
 import httpStatus from "http-status";
 
-import ErrorResponse from "../utils/errorResponse";
-import isMongoId from "../utils/helpers";
-import Sheet from "../models/Sheet";
+import ErrorResponse from "$/utils/errorResponse";
+import isMongoId from "$/utils/helpers";
+import Sheet from "$/models/Sheet";
 
 const findSheet = async (req, res, next) => {
   const id = req.params.sheetId || req.params.id;

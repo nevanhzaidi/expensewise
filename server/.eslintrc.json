@@ -39,6 +39,6 @@
       }
     ], // to set order of imports
     "node/no-unpublished-import": "off", // to disable unpublished imports issue
-    "import/no-extraneous-dependencies": "off" // to enable adding libraries to dev
+    "import/no-extraneous-dependencies": "on" // to enable adding libraries to dev
   }
 }

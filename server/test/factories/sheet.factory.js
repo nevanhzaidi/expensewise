@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-import Sheet from "../../models/Sheet";
+import Sheet from "$/models/Sheet";
 import UserFactory from "./user.factory";
 
 const SheetFactory = ({ title, description, owner } = {}) =>

@@ -2,9 +2,9 @@
 import httpStatus from "http-status";
 import mongoose from "mongoose";
 
-import config from "../config/config";
-import ErrorResponse from "../utils/errorResponse";
-import logger from "../config/logger";
+import config from "$/config/config";
+import ErrorResponse from "$/utils/errorResponse";
+import logger from "$/config/logger";
 
 const { ValidationError } = mongoose.Document;
 

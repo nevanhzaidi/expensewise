@@ -3,13 +3,13 @@ import httpStatus from "http-status";
 import request from "supertest";
 
 import { ADMIN, EDIT, VIEW } from "../../constants/permission";
-import app from "../../app";
-import { buildPermissionList } from "../factories/permission.factory";
-import Permission from "../../models/Permission";
-import setupTestDB from "../utils/setupTestDB";
-import Sheet from "../../models/Sheet";
-import { SheetFactory } from "../factories/sheet.factory";
-import UserFactory from "../factories/user.factory";
+import app from "$/app";
+import { buildPermissionList } from "$/test/factories/permission.factory";
+import Permission from "$/models/Permission";
+import setupTestDB from "$/test/utils/setupTestDB";
+import Sheet from "$/models/Sheet";
+import { SheetFactory } from "$/test/factories/sheet.factory";
+import UserFactory from "$/test/factories/user.factory";
 
 setupTestDB();
 

@@ -1,8 +1,8 @@
 import httpStatus from "http-status";
 
-import ErrorResponse from "../utils/errorResponse";
-import Expense from "../models/Expense";
-import isMongoId from "../utils/helpers";
+import ErrorResponse from "$/utils/errorResponse";
+import Expense from "$/models/Expense";
+import isMongoId from "$/utils/helpers";
 
 const findExpense = async (req, res, next) => {
   const { id } = req.params;

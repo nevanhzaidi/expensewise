@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 
-import asyncHandler from "../middlewares/async";
-import Sheet from "../models/Sheet";
+import asyncHandler from "$/middlewares/async";
+import Sheet from "$/models/Sheet";
 
 // @desc      Get sheets
 // @route     GET /api/v1/sheets

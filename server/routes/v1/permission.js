@@ -13,8 +13,8 @@ import {
   grantPermissionPolicy,
   permissionPolicy,
 } from "../../middlewares/authorize/permissionPolicy";
-import findPermission from "../../middlewares/permission";
-import findSheet from "../../middlewares/sheet";
+import findPermission from "$/middlewares/permission";
+import findSheet from "$/middlewares/sheet";
 
 const router = express.Router({ mergeParams: true });
 router.use(findSheet, sheetPolicy);

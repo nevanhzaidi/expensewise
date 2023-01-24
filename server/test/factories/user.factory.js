@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import User from "../../models/User";
+import User from "$/models/User";
 
 const UserFactory = ({ firstName, lastName, email, password } = {}) =>
   new User({

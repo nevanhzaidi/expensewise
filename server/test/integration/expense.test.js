@@ -4,11 +4,11 @@ import httpStatus from "http-status";
 import request from "supertest";
 
 import { buildExpenseList, ExpenseFactory } from "../factories/expense.factory";
-import app from "../../app";
-import Expense from "../../models/Expense";
-import setupTestDB from "../utils/setupTestDB";
-import { SheetFactory } from "../factories/sheet.factory";
-import UserFactory from "../factories/user.factory";
+import app from "$/app";
+import Expense from "$/models/Expense";
+import setupTestDB from "$/test/utils/setupTestDB";
+import { SheetFactory } from "$/test/factories/sheet.factory";
+import UserFactory from "$/test/factories/user.factory";
 
 setupTestDB();
 

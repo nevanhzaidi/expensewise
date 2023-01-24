@@ -4,10 +4,10 @@ import httpStatus from "http-status";
 import request from "supertest";
 
 import { buildSheetList, SheetFactory } from "../factories/sheet.factory";
-import app from "../../app";
-import setupTestDB from "../utils/setupTestDB";
-import Sheet from "../../models/Sheet";
-import UserFactory from "../factories/user.factory";
+import app from "$/app";
+import setupTestDB from "$/test/utils/setupTestDB";
+import Sheet from "$/models/Sheet";
+import UserFactory from "$/test/factories/user.factory";
 
 setupTestDB();
 

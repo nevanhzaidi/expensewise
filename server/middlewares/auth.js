@@ -2,8 +2,8 @@ import httpStatus from "http-status";
 import jwt from "jsonwebtoken";
 
 import asyncHandler from "./async";
-import ErrorResponse from "../utils/errorResponse";
-import User from "../models/User";
+import ErrorResponse from "$/utils/errorResponse";
+import User from "$/models/User";
 
 const { JsonWebTokenError, TokenExpiredError } = jwt;
 const protect = asyncHandler(async (req, res, next) => {

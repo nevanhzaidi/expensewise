@@ -11,7 +11,8 @@
     "start": "nodemon --es-module-specifier-resolution=node index.js",
     "lint": "eslint .",
     "lint_fix": "eslint . --fix",
-    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --runInBand"
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_ENV=test jest --runInBand",
+    "postinstall": "npx basetag link"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "@jest/globals": "^29.3.1",
+    "basetag": "^2.1.0",
     "eslint": "^8.30.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",

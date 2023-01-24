@@ -12,11 +12,11 @@ import {
   sheetPolicy,
   viewSheetPolicy,
 } from "../../middlewares/authorize/sheetPolicy";
-import advancedResults from "../../middlewares/advancedResults";
-import Expense from "../../models/Expense";
-import expensePolicy from "../../middlewares/authorize/expensePolicy";
-import findExpense from "../../middlewares/expense";
-import findSheet from "../../middlewares/sheet";
+import advancedResults from "$/middlewares/advancedResults";
+import Expense from "$/models/Expense";
+import expensePolicy from "$/middlewares/authorize/expensePolicy";
+import findExpense from "$/middlewares/expense";
+import findSheet from "$/middlewares/sheet";
 
 const router = express.Router({ mergeParams: true });
 router.use(findSheet, sheetPolicy);

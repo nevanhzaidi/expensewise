@@ -13,12 +13,12 @@ import {
   sheetPolicy,
   viewSheetPolicy,
 } from "../../middlewares/authorize/sheetPolicy";
-import advancedResults from "../../middlewares/advancedResults";
+import advancedResults from "$/middlewares/advancedResults";
 import ExpenseRouter from "./expenses";
-import findSheet from "../../middlewares/sheet";
+import findSheet from "$/middlewares/sheet";
 import PermissionRouter from "./permission";
-import protect from "../../middlewares/auth";
-import Sheet from "../../models/Sheet";
+import protect from "$/middlewares/auth";
+import Sheet from "$/models/Sheet";
 
 const router = express.Router({ mergeParams: true });
 
