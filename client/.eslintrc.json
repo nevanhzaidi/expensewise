@@ -55,5 +55,13 @@
     ], // to set order of imports
     "max-lines": ["error", { "max": 2000, "skipBlankLines": true }], // to set max number of line in one file is 2000 without blank lines
     "max-len": ["warn", 80] // to set line length to 80
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.tsx"],
+      "rules": {
+        "max-len": "off" // disable max line length for tests
+      }
+    }
+  ]
 }

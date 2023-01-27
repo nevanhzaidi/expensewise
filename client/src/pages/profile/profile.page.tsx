@@ -1,17 +1,17 @@
 import React from "react";
+
 import {
-  TextField,
-  Grid,
-  Container,
-  Typography,
+  Avatar,
   Box,
   Button,
-  Avatar,
+  Container,
+  Grid,
+  TextField,
 } from "@mui/material";
 import { Stack } from "@mui/system";
 
-import useStyles from "pages//profile/profile.styles";
 import userImage from "assets/user.png";
+import useStyles from "pages//profile/profile.styles";
 
 const ProfilePage = () => {
   const classes = useStyles();
@@ -47,43 +47,42 @@ const ProfilePage = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>First Name</Typography>
             <TextField
               disabled
               className={classes.textfield}
               variant="outlined"
               inputProps={{ style: { padding: 7 } }}
               value={user.name}
+              label="First Name"
             />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>Last Name</Typography>
             <TextField
               disabled
               className={classes.textfield}
               variant="outlined"
               inputProps={{ style: { padding: 7 } }}
               value={user.lastName}
+              label="Last Name"
             />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>Email</Typography>
             <TextField
               disabled
               className={classes.textfield}
               variant="outlined"
               inputProps={{ style: { padding: 7 } }}
               value={user.email}
+              label="Email"
             />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>Phone No</Typography>
             <TextField
               disabled
               className={classes.textfield}
@@ -91,35 +90,35 @@ const ProfilePage = () => {
               value={user.phoneNo}
               inputProps={{ style: { padding: 7 } }}
               autoComplete="new-password"
+              label="Phone No"
             />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>Dob</Typography>
             <TextField
               disabled
               className={classes.textfield}
               variant="outlined"
               inputProps={{ style: { padding: 7 } }}
               value={user.dob}
+              label="Dob"
             />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box className={classes.box}>
-            <Typography>Country</Typography>
             <TextField
               disabled
               className={classes.textfield}
               variant="outlined"
               inputProps={{ style: { padding: 7 } }}
               value={user.country}
+              label="Country"
             />
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Typography>Address</Typography>
           <TextField
             multiline
             disabled
@@ -130,6 +129,7 @@ const ProfilePage = () => {
             id="address"
             name="address"
             value={user.address}
+            label="Address"
           />
         </Grid>
         <Grid container justifyContent="center">

@@ -81,14 +81,12 @@ const SignupPage = () => {
                 fullWidth
                 name="password"
                 label="Password"
-                type="password"
                 id="password"
                 autoComplete="new-password"
               />
               <TextField
                 className={classes.textField}
                 margin="normal"
-                type="password"
                 required
                 fullWidth
                 name="Confirm password"
